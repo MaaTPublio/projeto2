@@ -3,19 +3,34 @@
     padding: 0;
 }
 /* background grandient */
-body{
+body, .nav{
     background: hsla(197, 100%, 63%, 1);
     background: linear-gradient(0deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
     background: -moz-linear-gradient(0deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
     background: -webkit-linear-gradient(0deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
 }
+main{
+    margin: auto;
+    max-width: 60vw;
+    background-color: rgba(0, 0, 0, 0.244);
+    padding: 10px;
+    border-radius: 20px;
+}
 /* barra de navegação do site */
+#logo{
+    position: relative;
+    left: 230px;
+    border-radius: 15px;
+}
+#logo:hover, #logo:active{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.386);
+}
 .nav{
     display: flex;
-    flex-direction: row;
-    justify-content:end;
-    background-color: #24684e4c;
+    position: relative;
+    right: 2vw;
+    justify-content: space-between;
     padding: 15px;
     max-height: 40px;
 }
@@ -25,7 +40,7 @@ body{
 }
 #navOpt{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
     text-align: center;
     font-size: 1.2em;
@@ -67,8 +82,29 @@ body{
 
     #navOpt{
         display: none;
+    }    
+    #logo{
+        position: relative;
+        left: 30px;
     }
 }
+/* Estilização Scrool Bar */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background: rgb(229 28 255);
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    border-radius: 30px;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    border: 2px solid rgb(255, 255, 255);
+  }
 /* titulo e sub titulo da pagina */
 h1{
     text-align: center;
@@ -91,13 +127,29 @@ h2{
     color: white;
     text-decoration: underline;
     text-shadow: 0 0 8px black;
+    margin-top: 1vw;
 }
+h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 0 0 8px black;
+}
+
 /* formatação do conteudo principal */
 .counteudo-principal{
-    display:flex;
-    align-items: center;
-    text-align: center;
-    max-width: 50%;
+    text-align: left;
+    max-width: 90%;
     margin: auto;
     margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+/* formatação do rodapé */
+footer{
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 19px;
+    background-color: #24684e4c;
+    border-top: 2px solid #cecfd8;
 }
