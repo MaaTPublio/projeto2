@@ -7,14 +7,24 @@ window.onload = function(){
     if(!menuOpen){
     menuBtn.classList.add("open");
     menuOpen = true;
-    console.log("teste")
+    dropmenu();
     }
     else{
     menuBtn.classList.remove("open");
     menuOpen = false;
+    hidemenu();
     }})
   }
 
+  
+  function dropmenu(){
+      const menudrop = document.getElementById("navOpt");
+      menudrop.style.display="flex";
+  }
+  function hidemenu(){
+    const menudrop = document.getElementById("navOpt");
+      menudrop.style.display="none";
+  }
  /* window.onload = function(){
     const burger = document.getElementById("burgerSH")
     burger.addEventListener("click", function(event){

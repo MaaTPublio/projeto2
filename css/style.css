@@ -25,6 +25,8 @@ main{
 }
 #logo:hover, #logo:active{
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.386);
+    transform: translateY(-4px);
+    transition: 1.5s;
 }
 .nav{
     display: flex;
@@ -72,6 +74,11 @@ main{
 #navOpt a:hover::after{
     transform: scaleX(1);
 }
+#navOpt a:active,#navOpt a:hover{
+    text-shadow:0 0 8px white;
+    transition: .6s;
+    transform: translateY(-4px);
+}
 @media (max-width: 999px) {
     .nav{
         padding: 15px;
@@ -82,7 +89,21 @@ main{
 
     #navOpt{
         display: none;
+        position: absolute;
+        top: 8vh;
+        right: -10px;
+        width: 80%;
+        height: 92vh;
+        background:#23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 10px;
     }    
+
+    #navOpt a{
+        color:white;
+    }
     #logo{
         position: relative;
         left: 30px;
@@ -117,7 +138,7 @@ h1{
     margin-bottom: 2vw;
 }
 
-h1:hover,:focus{
+h1:hover,h1:focus{
     text-shadow:0 0 8px white;
     transition: 2s;
     background-color: #0000005a;
@@ -152,4 +173,8 @@ footer{
     padding: 19px;
     background-color: #24684e4c;
     border-top: 2px solid #cecfd8;
+}
+
+#dropmenu{
+    display: none;
 }
