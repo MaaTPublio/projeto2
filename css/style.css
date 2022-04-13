@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 /* background grandient */
 body, .nav{
@@ -30,11 +31,12 @@ main{
 }
 .nav{
     display: flex;
-    position: relative;
-    right: 2vw;
+    position: sticky;
     justify-content: space-between;
     padding: 15px;
     max-height: 40px;
+    border-bottom: 2px solid #cecfd8;
+    width: 100%;
 }
 
 #navBurger {
@@ -108,6 +110,10 @@ main{
         position: relative;
         left: 30px;
     }
+    main{
+        max-width: 100vh;
+        margin: auto;
+    }
 }
 /* Estilização Scrool Bar */
 ::-webkit-scrollbar {
@@ -134,7 +140,6 @@ h1{
     padding: .8vw;
     text-shadow: 0 0 8px #000000;
     transition: 2s;
-    border-top: 2px solid #cecfd8;
     margin-bottom: 2vw;
 }
 
@@ -149,12 +154,14 @@ h2{
     text-decoration: underline;
     text-shadow: 0 0 8px black;
     margin-top: 1vw;
+
 }
 h3{
     margin-top: 10px;
     margin-bottom: 10px;
     color: white;
     text-shadow: 0 0 8px black;
+
 }
 
 /* formatação do conteudo principal */
@@ -164,6 +171,7 @@ h3{
     margin: auto;
     margin-top: 1vw;
     margin-bottom: 1vw;
+    font-size: 18px;
 }
 /* formatação do rodapé */
 footer{
@@ -177,4 +185,20 @@ footer{
 
 #dropmenu{
     display: none;
+}
+.image img{
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    transition: 1s;
+}
+
+.image img:hover{
+    opacity: 80%;
+    transform: translateX(4px);
+    transition: 1s;
 }
