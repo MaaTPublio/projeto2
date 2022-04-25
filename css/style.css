@@ -20,7 +20,7 @@ main{
 }
 /* barra de navegação do site */
 #logo{
-    position: relative;
+    position:static;
     left: 230px;
     border-radius: 15px;
 }
@@ -36,7 +36,6 @@ main{
     padding: 15px;
     max-height: 40px;
     border-bottom: 2px solid #cecfd8;
-    width: 100%;
 }
 
 #navBurger {
@@ -93,10 +92,10 @@ main{
         display: none;
         position: absolute;
         top: 8vh;
-        right: -10px;
-        width: 80%;
-        height: 92vh;
-        background:#23232e;
+        right: 0;
+        width: 50%;
+        height: 40vh;
+        background-color: hsl(249deg 100% 74%);
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -202,3 +201,31 @@ footer{
     transform: translateX(4px);
     transition: 1s;
 }
+/*------------------animação de loading---------------------------*/
+.JzhGkJGE_0{stroke-dasharray:16 18;stroke-dashoffset:17;animation:JzhGkJGE_draw_0 3200ms linear 0ms infinite,JzhGkJGE_fade 3200ms linear 0ms infinite;}
+.JzhGkJGE_1{stroke-dasharray:16 18;stroke-dashoffset:17;animation:JzhGkJGE_draw_1 3200ms linear 0ms infinite,JzhGkJGE_fade 3200ms linear 0ms infinite;}
+.JzhGkJGE_2{stroke-dasharray:19 21;stroke-dashoffset:20;animation:JzhGkJGE_draw_2 3200ms linear 0ms infinite,JzhGkJGE_fade 3200ms linear 0ms infinite;}
+.JzhGkJGE_3{stroke-dasharray:19 21;stroke-dashoffset:20;animation:JzhGkJGE_draw_3 3200ms linear 0ms infinite,JzhGkJGE_fade 3200ms linear 0ms infinite;}
+@keyframes JzhGkJGE_draw{100%{stroke-dashoffset:0;}}
+@keyframes JzhGkJGE_fade{0%{stroke-opacity:1;}96.875%{stroke-opacity:1;}100%{stroke-opacity:0;}}
+@keyframes JzhGkJGE_draw_0{3.125%{stroke-dashoffset: 17}57.29166666666667%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}
+@keyframes JzhGkJGE_draw_1{12.152777777777777%{stroke-dashoffset: 17}66.31944444444444%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}
+@keyframes JzhGkJGE_draw_2{21.180555555555554%{stroke-dashoffset: 20}75.34722222222223%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}
+@keyframes JzhGkJGE_draw_3{30.208333333333325%{stroke-dashoffset: 20}84.375%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#000000; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+  }
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+  }
+  /*-------------------------------------------------------------------*/

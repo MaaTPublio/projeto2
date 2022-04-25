@@ -18,11 +18,11 @@ window.onload = function(){
 
   
   function dropmenu(){
-      const menudrop = document.getElementById("navOpt");
+      var menudrop = document.getElementById("navOpt");
       menudrop.style.display="flex";
   }
   function hidemenu(){
-    const menudrop = document.getElementById("navOpt");
+      var menudrop = document.getElementById("navOpt");
       menudrop.style.display="none";
   }
  /* window.onload = function(){
@@ -31,3 +31,17 @@ window.onload = function(){
     burgerSH.style.display = "flex";
   }
   } */
+
+window.addEventListener('resize', verifTam);
+
+function verifTam(){
+  var menudrop = document.getElementById("navOpt");
+  var largura = window.innerWidth
+  || document.documentElement.clientWidth
+  || document.body.clientWidth;
+
+  if (largura > 999)
+    menudrop.style.display="flex";
+    else
+    menudrop.style.display="none";
+}
